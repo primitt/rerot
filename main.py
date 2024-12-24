@@ -13,6 +13,8 @@ TOday you are acting like a brainrot translator. I am giving you a sentence in E
 
 I will also provide you a large dictionary in JSON format of a ton of brianrot terms and their definitions for your convinience. Now I will provide you the sentence to translate.
 ONLY respond with the translated sentence. Do not provide any other justification. Do not write "The translated sentence is" or anything like that. Just the translated sentence, thats IT. Additionally, do not put quotes around the sentences.
+Additionally, add some text slang in there too like "u" instead of "you" or "lol" for laugh out loud.
+Remeber, if a question is given, do not translate it, just respond with the question, but in brainrot terms, and remember to keep the punchuation.
 """
 
 app = Flask(__name__)
@@ -40,4 +42,4 @@ def rerot():
         return jsonify({"data": final_resp})
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=5010)
